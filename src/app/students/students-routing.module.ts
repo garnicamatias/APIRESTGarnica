@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StudentsTableComponent } from './components/students-table/students-table.component';
 
 const routes: Routes = [
-  // {path: 'home/students', component: StudentsTableComponent}
+  {path: '', component: StudentsTableComponent}
 
 ];
 

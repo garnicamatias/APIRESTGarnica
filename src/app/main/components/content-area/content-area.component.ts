@@ -14,8 +14,8 @@ export class ContentAreaComponent{
 
   }
   
-  // catchUrl() : boolean {
-  //   return this.router.url === '/main'
-  // }
+  catchUrl() : boolean {
+    return this.router.url === '/main'
+  }
 
 }

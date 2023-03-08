@@ -15,6 +15,7 @@ import { LayoutModule } from './layout/layout.module';
 import { MainModule } from './main/main.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,15 +28,13 @@ import { LoginModule } from './login/login.module';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    TeachersModule,
-    StudentsModule,
     CoreModule,
     AppRoutingModule,
     SharedModule,
     RouterModule,
     LayoutModule,
-    MainModule,
     HomeModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

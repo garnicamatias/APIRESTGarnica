@@ -23,7 +23,8 @@ import { StudentsService } from './services/students.service';
     MaterialModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StudentsRoutingModule
   ],
   providers: [StudentsService]
 })

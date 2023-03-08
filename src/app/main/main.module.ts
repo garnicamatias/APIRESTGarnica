@@ -6,6 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { MainRoutingModule } from './main-routing.module';
 
 
 
@@ -19,12 +20,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     RouterModule,
     MaterialModule,
-    SharedModule
-  ],
-  exports:[
-    MainLayoutComponent,
-    SidebarComponent,
-    ContentAreaComponent
+    SharedModule,
+    MainRoutingModule
   ]
 })
 export class MainModule { }
