@@ -8,6 +8,7 @@ import { NotFoundComponent } from './core/components/not-found/not-found.compone
 
 const routes : Routes = [
 
+  {path:'', redirectTo: 'home', pathMatch: 'full'},
   {path:'home', component: HomeLayoutComponent},
   {path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
 
