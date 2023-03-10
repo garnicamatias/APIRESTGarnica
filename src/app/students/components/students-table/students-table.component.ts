@@ -6,6 +6,7 @@ import { Student } from '../../../shared/models/student';
 import { EditModalComponent } from '../edit-modal/edit-modal.component';
 import { AddModalComponent } from '../add-modal/add-modal.component';
 import { Subscriber, Subscription } from 'rxjs';
+import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 
 
 @Component({
@@ -38,8 +39,8 @@ export class StudentsTableComponent implements OnInit{
     this.suscription.unsubscribe();
   }
 
-  deleteStudent(studentId : number){
-    this.studentsService.deleteStudent(studentId)
+  deleteStudentDialog(student : Student){
+    this.dialog.open(DeleteDialogComponent, { data: student })
   }
 
   editStudent = (student : Student) => {
@@ -48,6 +49,10 @@ export class StudentsTableComponent implements OnInit{
 
   openAddModal() {
     const dialogRef = this.dialog.open(AddModalComponent)
+  }
+
+  openDeleteDialog() {
+    const dialogRef = this.dialog.open(DeleteDialogComponent)
   }
 
 }

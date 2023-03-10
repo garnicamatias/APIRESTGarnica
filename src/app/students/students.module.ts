@@ -8,6 +8,7 @@ import { EditModalComponent } from './components/edit-modal/edit-modal.component
 import { StudentsTableComponent } from './components/students-table/students-table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StudentsService } from './services/students.service';
+import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
 
 
 
@@ -15,7 +16,8 @@ import { StudentsService } from './services/students.service';
   declarations: [
     AddModalComponent,
     EditModalComponent,
-    StudentsTableComponent
+    StudentsTableComponent,
+    DeleteDialogComponent
   ],
   imports: [
     CommonModule,

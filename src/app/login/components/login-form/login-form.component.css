@@ -95,3 +95,9 @@ button:disabled{
     cursor: not-allowed !important;
     pointer-events: all !important;
 }
+
+
+.checkboxContainer{
+    display: flex;
+    flex-direction: column;
+}
