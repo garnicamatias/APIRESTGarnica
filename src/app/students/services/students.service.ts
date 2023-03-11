@@ -9,10 +9,13 @@ import { Student } from '../../shared/models/student';
 })
 export class StudentsService {
 
+  private students$ !: BehaviorSubject<Student[]>
+  private students !: Observable<Student[]>
+
   constructor(
     private http : HttpClient
   ) {
-
+    
    }
 
 
@@ -20,19 +23,15 @@ export class StudentsService {
     return this.http.get<Student[]>(`${env.apiURL}/students`)
   }
 
-  addStudent (newStudent : Student) {
+  addStudent (newStudent : Student) : Observable<Student> {
+    return this.http.post<Student>(`${env.apiURL}/students`, newStudent)
   }
 
-  editStudent (newStudent : Student){
-    // let setPosition = (student : Student) => student.id == newStudent.id
-    // let studentPosition = this.students.findIndex(setPosition)
-    // this.students[studentPosition] = newStudent;
-    // this.students$.next(this.students)
+  editStudent (student : Student){
+    return this.http.put<Student>(`${env.apiURL}/students/${student.id}`, student)
   }
 
-  deleteStudent(studentId : number){
-    // this.students = this.students.filter(e => 
-    //   e.id !== studentId)
-    // this.students$.next(this.students)
+  deleteStudent(student : Student){
+    return this.http.delete<Student>(`${env.apiURL}/students/${student.id}`)
   }
 }
